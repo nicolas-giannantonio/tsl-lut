@@ -46,7 +46,7 @@ postProcessing.outputNode = transform(outputPass, lutTex);
 
 ```
 
----
+
 ## Notes
 
 Use Nearest filtering, no mipmaps, and ClampToEdge for LUTs (handled in createLUT).
@@ -55,11 +55,11 @@ interp: 'zOnly' = 2 fetches/pixel (fast). interp: 'trilinear' = 8 fetches (smoot
 
 Ensure the LUT size/grid match your image (e.g., 64 with grid 8 for a 512×512 packed LUT).
 
----
+
 ## About TSL
 Official documentation : [Three.js-Shading-Language](https://github.com/mrdoob/three.js/wiki/Three.js-Shading-Language)
 
----
+
 ## License
 
 MIT - [LICENSE.md](https://github.com/nicolas-giannantonio/tsl-lut/LICENSE.md)
