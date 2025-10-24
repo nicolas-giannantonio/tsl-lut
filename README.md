@@ -29,8 +29,10 @@ import * as THREE from 'three/webgpu';
 import { pass, renderOutput } from 'three/tsl';
 import { createLUT, makeLUTTransform } from 'tsl-lut';
 
-// 1) Load LUT texture (Nearest, no mipmaps, ClampToEdge are set by createLUT)
-const { texture: lutTex } = await createLUT('/lookup_selective_color.png');
+// 1) Load LUT texture
+const { texture: lutTex } = await createLUT({
+    input: '/lookup_selective_color.png'
+});
 
 // 2) Create the LUT transform (64^3 LUT packed as an 8x8 grid)
 const transform = makeLUTTransform({ size: 64, grid: 8, interp: 'zOnly' });
@@ -45,7 +47,21 @@ const outputPass = renderOutput(scenePass);
 postProcessing.outputNode = transform(outputPass, lutTex);
 
 ```
+### Options
 
+Adding existing loaders:
+```js
+// ...
+const {texture: lutText} = await createLUT({
+    input: './lookup_miss.png',
+    loader: loader, // your existing THREE.TextureLoader
+    options: { 
+        min: THREE.MinificationTextureFilter,
+        mag: THREE.MagnificationTextureFilter,
+        flipY: false
+    }
+});
+```
 
 ## Notes
 
