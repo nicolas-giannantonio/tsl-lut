@@ -44,7 +44,7 @@ postProcessing.outputColorTransform = false;
 const scenePass = pass(scene, camera);
 const outputPass = renderOutput(scenePass);
 
-postProcessing.outputNode = transform(outputPass, lutTex);
+postProcessing.outputNode = transform(outputPass, lutTex); // apply LUT transform
 
 ```
 ### Options
