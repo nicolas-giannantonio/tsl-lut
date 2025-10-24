@@ -9,3 +9,4 @@ example/node_modules/
 .idea/
 # NPM lock (on utilise pnpm)
 package-lock.json
+*.tgz
