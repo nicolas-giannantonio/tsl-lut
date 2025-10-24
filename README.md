@@ -14,7 +14,7 @@ npm install tsl-lut
 ## Usage
 GUIDE [mattdesl/glsl-lut](https://github.com/mattdesl/glsl-lut)
 
-First, grab the original (un-altered) lookup table from the image folder.
+First, grab the original (un-altered) lookup table [image](https://github.com/mattdesl/glsl-lut/blob/master/image/lookup.png).
 
 Then you can apply any filters with Photoshop or at runtime to the lookup table image. These can be things like curves,
 levels, grayscale, etc. Each transform must be independent of surrounding pixels (no blurs, median, etc.).
