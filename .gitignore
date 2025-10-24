@@ -1,0 +1,11 @@
+node_modules/
+dist/
+*.log
+.DS_Store
+coverage/
+example/node_modules/
+.env
+# IDE
+.idea/
+# NPM lock (on utilise pnpm)
+package-lock.json

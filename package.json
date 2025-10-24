@@ -1,0 +1,28 @@
+{
+  "name": "tsl-lut",
+  "author": "Nicolas Giannantonio",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && npm run types",
+    "preview": "vite preview",
+    "types": "tsc -p tsconfig.types.json"
+  },
+  "files": ["dist"],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "devDependencies": {
+    "@types/three": "^0.180.0",
+    "typescript": "^5.0.2",
+    "vite": "^4.4.0"
+  },
+  "peerDependencies": {
+    "three": "^0.180.0"
+  }
+}

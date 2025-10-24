@@ -1,0 +1,13 @@
+// tsconfig.types.json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationDir": "dist",
+    "outDir": "dist"
+  },
+  "include": ["src"],
+  "exclude": ["src/examples/**"]     // <-- ajoute ça
+}
