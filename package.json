@@ -1,8 +1,15 @@
 {
   "name": "tsl-lut",
   "author": "Nicolas Giannantonio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "type": "module",
+  "description": "Apply a LUT texture for color remapping as a post-process in Three.js WebGPU/TSL.",
+  "bugs": {
+    "url": "https://github.com/nicolas-giannantonio/tsl-lut/issues"
+  },
+  "repository": { "type": "git", "url": "https://github.com/nicolas-giannantonio/tsl-lut.git" },
+  "homepage": "https://github.com/nicolas-giannantonio/tsl-lut",
+  "keywords": ["three", "tsl", "webgpu", "lut", "postprocessing"],
   "scripts": {
     "dev": "vite",
     "build": "vite build && npm run types",
